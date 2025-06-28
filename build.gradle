@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.figaf'
-version = '2.5-IRT-5117-SNAPSHOT'
+version = '2.5-1nbuc-fork-universal-id-auth'
 
 ext {
     enableSnapshotsForDependencyResolutionAndPublishing = project.findProperty('enableSnapshots') ?: 'false'
@@ -13,7 +13,8 @@ ext {
     snapshotsRepoPassword = project.findProperty('snapshotsRepoPassword') ?: ''
 
     lombokVersion = '1.18.34'
-    integrationCommonsVersion = '2.6'
+    // Use fork with universal ID auth enabled
+    integrationCommonsVersion = 'feat~universal_id_auth-SNAPSHOT'
     integrationCommonsTestVersion = '2.1'
     snakeyamlVersion = '2.2'
 }
@@ -41,7 +42,7 @@ dependencies {
     testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    api "com.github.figaf:integration-commons:${integrationCommonsVersion}"
+    api "com.github.1nbuc:integration-commons:${integrationCommonsVersion}"
 
     testImplementation "com.github.figaf:integration-commons-test:${integrationCommonsTestVersion}"
     testImplementation "org.yaml:snakeyaml:${snakeyamlVersion}"
