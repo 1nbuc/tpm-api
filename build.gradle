@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.github.figaf'
-version = '2.5-1nbuc-fork-universal-id-auth'
+group = 'com.github.1nbuc'
+version = '2.5-1nbuc-fork-universal-id-auth-SNAPSHOT'
 
 ext {
     enableSnapshotsForDependencyResolutionAndPublishing = project.findProperty('enableSnapshots') ?: 'false'
